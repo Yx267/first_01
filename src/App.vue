@@ -1,27 +1,24 @@
 <template>
     <div id="app">
-      <Header/>
-      <swiper/>
-      <Foorl/>
+      <Header />
+      <router-view></router-view>
+      <Foorl />
+
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
-import Foorl from './components/Foorl.vue'
-import swiper from './components/swiper.vue'
+
+import Index from './views/index.vue'
 
 export default {
   name: 'App',
   components: {
-    Foorl,Header,
-    swiper
+   
+    Index
 },
 mounted(){
-   var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        paginationClickable: true
-    });
+ 
 }
 }
 </script>
@@ -39,9 +36,14 @@ a{
   color: #000;
 }
 .active{
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
 }
-
+@media(max-width:1000px){
+  .active{
+  width: 90%;
+  margin: 0 auto;
+}
+}
 
 </style>

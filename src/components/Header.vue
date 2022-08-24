@@ -8,7 +8,7 @@
         <!-- 分类 -->
         <ul class="headertwo">
             <li>
-                <a href="#">關於昇達</a>
+                <a href="#" @click="put('intro')">關於昇達</a>
                 <div class="hetweochild ">
                      <div class=" childd">
             <div class="cleft">
@@ -38,7 +38,7 @@
                 </div>
             </li>
             <li>
-                <a href="#">研發與專業製造</a>
+                <a @click="put('make')" href="#">研發與專業製造</a>
                  <div class="hetweochild ">
                      <div class=" childd">
             <div class="cleft">
@@ -68,7 +68,7 @@
                 </div>
             </li>
             <li>
-                <a href="#">產品介紹</a>
+                <a @click="put('product')" href="#">產品介紹</a>
                  <div class="hetweochild ">
                      <div class=" childd">
             <div class="cleft">
@@ -98,7 +98,7 @@
                 </div>
             </li>
             <li>
-                <a href="#">投資人關係</a>
+                <a @click="put('finance')" href="#">投資人關係</a>
                  <div class="hetweochild ">
                      <div class=" childd">
             <div class="cleft">
@@ -128,7 +128,7 @@
                 </div>
             </li>
             <li>
-                <a href="#">新聞中心</a>
+                <a href="#" @click="put('news')">新聞中心</a>
                  <div class="hetweochild ">
                      <div class=" childd">
             <div class="cleft">
@@ -158,7 +158,7 @@
                 </div>
             </li>
             <li>
-                <a href="#">人力資源</a>
+                <a href="#" @click="put('resource')">人力資源</a>
                  <div class="hetweochild ">
                      <div class=" childd">
             <div class="cleft">
@@ -208,7 +208,11 @@
 <script>
 export default {
     name: 'Header',
-    
+    methods:{
+        put(urls,zi){
+            this.$router.push({path:'/'+urls+''})
+        }
+    }
 }
 </script>
 
@@ -237,8 +241,10 @@ export default {
         height: 100px;
         line-height: 100px;
     }
-    
-     .headertwo li:hover a{
+    .headertwo li .a{
+        display: block;
+    }
+     .headertwo li:hover .a{
         color: rgb(0, 0, 178);
      }
     .headerthree{

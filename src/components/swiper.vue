@@ -35,7 +35,8 @@ mounted(){
         paginationClickable: true,
         slidesPerView: 1,
 	    speed: 2500, // 每次切换时长
-        autoplay:3000
+        autoplay:3000,
+        loop:true
     });
 }
 }
